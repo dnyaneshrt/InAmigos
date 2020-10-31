@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TS Amigos</string>
+    <string name="title_activity_category">CategoryActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_collection">Collection</string>
+    <string name="menu_my_design">My Design</string>
+    <string name="menu_vote_for_design">Vote for Design</string>
+
+    <string name="menu_fanbook">FanBook</string>
+    <string name="menu_help_support">Help and Support</string>
+    <string name="menu_rate_the_app">Rate the App</string>
+    <string name="menu_feedback">Feedback</string>
+
+</resources>

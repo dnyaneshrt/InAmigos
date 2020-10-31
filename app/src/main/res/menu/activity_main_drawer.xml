@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_collection"
+            android:icon="@drawable/collection"
+            android:title="@string/menu_collection" />
+        <item
+            android:id="@+id/nav_my_design"
+            android:icon="@drawable/my_design"
+            android:title="@string/menu_my_design" />
+        <item
+            android:id="@+id/nav_vote_for_design"
+            android:icon="@drawable/vote_for_design"
+            android:title="@string/menu_vote_for_design" />
+
+
+        <item
+            android:id="@+id/nav_fanbook"
+            android:icon="@drawable/fanbook"
+            android:title="@string/menu_fanbook" />
+        <item
+            android:id="@+id/nav_help_support"
+            android:icon="@drawable/help_support"
+            android:title="@string/menu_help_support" />
+        <item
+            android:id="@+id/nav_rate_app"
+            android:icon="@drawable/rating"
+            android:title="@string/menu_rate_the_app" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/feedback"
+            android:title="@string/menu_fanbook" />
+
+    </group>
+</menu>
