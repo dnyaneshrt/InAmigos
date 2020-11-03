@@ -23,10 +23,22 @@ class LoginActivity : AppCompatActivity() {
         google = findViewById(R.id.google_button)
         Toast.makeText(this, "click on login ", Toast.LENGTH_SHORT).show()
         loginbtn!!.setOnClickListener(View.OnClickListener {
-//            val intent = Intent(this@LoginActivity, FanbookActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+            startActivity(intent)
         })
-        fb!!.setOnClickListener(View.OnClickListener { Toast.makeText(this@LoginActivity, "facebook clicked ", Toast.LENGTH_SHORT).show() })
-        google!!.setOnClickListener(View.OnClickListener { Toast.makeText(this@LoginActivity, "google clicked ", Toast.LENGTH_SHORT).show() })
+        fb!!.setOnClickListener(View.OnClickListener {
+            Toast.makeText(
+                this@LoginActivity,
+                "facebook clicked ",
+                Toast.LENGTH_SHORT
+            ).show()
+        })
+        google!!.setOnClickListener(View.OnClickListener {
+            Toast.makeText(
+                this@LoginActivity,
+                "google clicked ",
+                Toast.LENGTH_SHORT
+            ).show()
+        })
     }
 }
