@@ -43,7 +43,7 @@ class MenWomenActivity : AppCompatActivity() {
             tx.commit()
         }
         btn3?.setOnClickListener {
-            val intent = Intent(this@MenWomenActivity, CategoryActivity::class.java)
+            val intent = Intent(this@MenWomenActivity, HomeScreenActivity::class.java)
             startActivity(intent)
 
         }

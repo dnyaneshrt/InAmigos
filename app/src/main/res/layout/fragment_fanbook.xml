@@ -1,0 +1,38 @@
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="FanBook"/>
+        <View
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"/>
+        <TextView
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="This is where our fans flaunt their love! To participate in our #WeeklyGoodieRush, just upload your picture wearing our products on Instagram using #inamigosofficial and stand a chance to win goodies every week! Start uploading!"/>
+        <ImageView
+            android:src="@drawable/fanbook"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_width="400dp"
+            android:layout_height="600dp"/>
+    </LinearLayout>
+</ScrollView>

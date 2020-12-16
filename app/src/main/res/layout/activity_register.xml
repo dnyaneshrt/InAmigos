@@ -68,6 +68,7 @@
         app:layout_constraintVertical_bias="0.915" />
 
     <EditText
+android:background="@drawable/edittext_bg"
         android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:paddingLeft="20dp"
@@ -83,6 +84,7 @@
         app:layout_constraintVertical_bias="0.431" />
 
     <EditText
+android:background="@drawable/edittext_bg"
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="match_parent"
         android:paddingLeft="20dp"
@@ -97,6 +99,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+android:background="@drawable/edittext_bg"
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
         android:paddingLeft="20dp"

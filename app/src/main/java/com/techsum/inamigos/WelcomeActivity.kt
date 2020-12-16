@@ -31,7 +31,7 @@ class WelcomeActivity : AppCompatActivity() {
         })
 
         btn3!!.setOnClickListener {
-            val intent = Intent(this@WelcomeActivity, CategoryActivity::class.java)
+            val intent = Intent(this@WelcomeActivity, HomeScreenActivity::class.java)
             startActivity(intent)
         }
     }

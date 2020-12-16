@@ -7,19 +7,43 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.techsum.inamigos.ui.home.HomeFragment"
+        android:name="com.techsum.inamigos.ui.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_collection"
-        android:name="com.techsum.inamigos.ui.gallery.GalleryFragment"
+        android:name="com.techsum.inamigos.ui.CollectionFragment"
         android:label="@string/menu_collection"
-        tools:layout="@layout/fragment_gallery" />
-
+        tools:layout="@layout/fragment_collection" />
     <fragment
         android:id="@+id/nav_my_design"
-        android:name="com.techsum.inamigos.ui.slideshow.SlideshowFragment"
+        android:name="com.techsum.inamigos.ui.MyDesignFragment"
         android:label="@string/menu_my_design"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_my_design" />
+    <fragment
+        android:id="@+id/nav_vote_for_design"
+        android:name="com.techsum.inamigos.ui.VoteForDesignFragment"
+        android:label="@string/menu_vote_for_design"
+        tools:layout="@layout/fragment_vote_for_design" />
+    <fragment
+        android:id="@+id/nav_fanbook"
+        android:name="com.techsum.inamigos.ui.FanbookFragment"
+        android:label="@string/menu_fanbook"
+        tools:layout="@layout/fragment_fanbook" />
+    <fragment
+        android:id="@+id/nav_help_support"
+        android:name="com.techsum.inamigos.ui.HelpSupportFragment"
+        android:label="@string/menu_help_support"
+        tools:layout="@layout/fragment_help_support" />
+    <fragment
+        android:id="@+id/nav_rate_app"
+        android:name="com.techsum.inamigos.ui.RateAppFragment"
+        android:label="@string/menu_rate_the_app"
+        tools:layout="@layout/fragment_rate_app" />
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.techsum.inamigos.ui.FeedbackFragment"
+        android:label="@string/menu_feedback"
+        tools:layout="@layout/fragment_feedback" />
 </navigation>

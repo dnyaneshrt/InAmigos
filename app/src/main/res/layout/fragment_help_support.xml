@@ -1,0 +1,31 @@
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:paddingLeft="5dp"
+android:background="@drawable/edittext_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="Enter title"/>
+        <EditText
+            android:paddingLeft="5dp"
+            android:layout_marginTop="20dp"
+android:background="@drawable/edittext_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:hint="Enter description"/>
+        <Button
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

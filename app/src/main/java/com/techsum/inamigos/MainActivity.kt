@@ -1,6 +1,7 @@
 package com.techsum.inamigos
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -12,8 +13,11 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKeys
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
+
 
 class MainActivity : AppCompatActivity() {
     private var viewPager: ViewPager? = null
@@ -22,31 +26,44 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dots: Array<TextView?>
     private var btnSkip: Button? = null
     private var btnNext: Button? = null
+    private var sharedPreferences: SharedPreferences? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val masterKeyAlias: String = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
+        sharedPreferences = EncryptedSharedPreferences.create("APP_CONFIG",masterKeyAlias,this,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV, EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM)
+        if (sharedPreferences!!.getString("introScreenShown", "").equals("1") && sharedPreferences!!.getString("isLoggedIn", "").equals("1")) {
+            val intent = Intent(this@MainActivity, HomeScreenActivity::class.java)
+            startActivity(intent)
+        } else if(sharedPreferences!!.getString("introScreenShown", "").equals("1")){
+            val intent = Intent(this@MainActivity, WelcomeActivity::class.java)
+            startActivity(intent)
+        }
         setContentView(R.layout.activity_main)
-
         supportActionBar!!.hide()
-
         if (Build.VERSION.SDK_INT >= 21) {
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            window.decorView.systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
         }
         chnageBarColour()
         viewPager = findViewById<View>(R.id.view_pager) as ViewPager
         dotsLayout = findViewById<View>(R.id.layoutDots) as LinearLayout
         btnSkip = findViewById<View>(R.id.btn_skip) as Button
+        btnSkip!!.visibility = View.GONE
         btnNext = findViewById<View>(R.id.btn_next) as Button
+
         btnNext!!.setOnClickListener {
             val current = viewPager!!.currentItem + 1
-            Log.d("btncheck", current.toString() + " " + layouts.size)
             if (current < layouts.size) {
                 viewPager!!.currentItem = current
             } else {
+                setValuesInSharedPreferences()
                 val intent = Intent(this@MainActivity, WelcomeActivity::class.java)
                 startActivity(intent)
             }
         }
         btnSkip!!.setOnClickListener {
+            setValuesInSharedPreferences()
             val intent = Intent(this@MainActivity, WelcomeActivity::class.java)
             startActivity(intent)
         }
@@ -66,10 +83,11 @@ class MainActivity : AppCompatActivity() {
                 addbtn(position)
                 if (position == layouts.size - 1) {
                     btnNext!!.text = "Start"
+                    btnNext!!.visibility = View.VISIBLE
                     btnSkip!!.visibility = View.GONE
                 } else {
                     btnNext!!.text = "Next"
-                    btnSkip!!.visibility = View.VISIBLE
+                    btnSkip!!.visibility = View.GONE
                 }
             }
 
@@ -104,5 +122,13 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         lateinit var layouts: IntArray
+    }
+
+    fun setValuesInSharedPreferences() {
+        val editor = sharedPreferences!!.edit()
+        editor.putString("introScreenShown", "1")
+        editor.apply()
+
+        Log.e("setValuesInSharedPreferences",""+sharedPreferences!!.getString("introScreenShown", ""));
     }
 }

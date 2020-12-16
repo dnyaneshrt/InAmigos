@@ -1,0 +1,44 @@
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="@android:color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Please rate the app."/>
+        <RatingBar
+            android:layout_marginTop="10dp"
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:saveEnabled="true"
+            android:numStars="5"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Please write any comments."/>
+        <EditText
+            android:paddingLeft="5dp"
+android:background="@drawable/edittext_bg"
+            android:hint="Comment"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"/>
+        <Button
+            android:textAllCaps="false"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textSize="14sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</ScrollView>
