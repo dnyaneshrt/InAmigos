@@ -241,6 +241,7 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
     {
         Toast.makeText(this, "open text window called", Toast.LENGTH_SHORT).show();
         colorCodeTextView = colorCode;
+
         LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View addTextPopupWindowRootView = inflater.inflate(R.layout.add_text_popup_window, null);
         final EditText addTextEditText = (EditText) addTextPopupWindowRootView.findViewById(R.id.add_text_edit_text);

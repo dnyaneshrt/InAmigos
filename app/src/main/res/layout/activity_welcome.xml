@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/welcome_bg"
     tools:context=".WelcomeActivity">
 
     <Button
@@ -13,6 +14,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Sign In"
+        android:textStyle="bold"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
         android:padding="25dp"
@@ -31,6 +33,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Sign Up"
+        android:textStyle="bold"
         android:padding="25dp"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
@@ -45,8 +48,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:textSize="30sp"
+        android:text="Welcome in InAmigos"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
         android:textColor="#ffffff"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,16 +61,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.386" />
 
-    <Button
-        android:visibility="gone"
-        android:id="@+id/skip_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="skip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.996"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

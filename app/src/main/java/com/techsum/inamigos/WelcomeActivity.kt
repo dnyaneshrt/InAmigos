@@ -19,7 +19,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         btn1 = findViewById(R.id.button_signin)
         btn2 = findViewById(R.id.button_signup)
-        btn3 = findViewById(R.id.skip_button)
+//        btn3 = findViewById(R.id.skip_button)
 
         btn2!!.setOnClickListener(View.OnClickListener {
             val intent = Intent(this@WelcomeActivity, RegisterActivity::class.java)
@@ -30,9 +30,9 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-        btn3!!.setOnClickListener {
-            val intent = Intent(this@WelcomeActivity, HomeScreenActivity::class.java)
-            startActivity(intent)
-        }
+//        btn3!!.setOnClickListener {
+//            val intent = Intent(this@WelcomeActivity, HomeScreenActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 }

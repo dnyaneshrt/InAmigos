@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
         val masterKeyAlias: String = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
         sharedPreferences = EncryptedSharedPreferences.create("APP_CONFIG",masterKeyAlias,this,
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV, EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM)
-        loginbtn = findViewById(R.id.login_button)
+        loginbtn = findViewById(R.id.user_login_button)
         signin_btn = findViewById(R.id.button_signin)
         fb = findViewById(R.id.fb_button)
         google = findViewById(R.id.google_button)
