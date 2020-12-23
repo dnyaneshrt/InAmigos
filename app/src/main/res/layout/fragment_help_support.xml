@@ -5,6 +5,7 @@
         android:padding="10dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/welcome_bg"
         android:orientation="vertical">
         <EditText
             android:paddingLeft="5dp"
@@ -24,6 +25,8 @@ android:background="@drawable/edittext_bg"
             android:textSize="14sp"
             android:textAllCaps="false"
             android:text="Submit"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_shape"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

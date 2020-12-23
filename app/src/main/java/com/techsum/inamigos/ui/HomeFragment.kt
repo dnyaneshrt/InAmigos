@@ -12,8 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android4dev.recyclerview.recyclerview_helper.GridItemDecoration
-import com.techsum.inamigos.BaseActivity
-import com.techsum.inamigos.MediaActivity
+import com.techsum.inamigos.photoeditor.BaseActivity
 import com.techsum.inamigos.R
 import com.techsum.inamigos.adapter.HomeScreenAdapter
 import com.techsum.inamigos.model.HomeScreenItem
@@ -76,7 +75,7 @@ class HomeFragment : Fragment(), HomeScreenAdapter.OnItemClick {
     }
 }
 
-class Test:BaseActivity()
+class Test: BaseActivity()
 {
     fun test()
     {

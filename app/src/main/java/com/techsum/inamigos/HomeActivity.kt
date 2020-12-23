@@ -16,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
 
         btn1?.setOnClickListener {
 
-            Toast.makeText(this,"clicked",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"clicked",Toast.LENGTH_LONG).show()
             val intent = Intent(this@HomeActivity, MenWomenActivity::class.java)
             startActivity(intent)
         }

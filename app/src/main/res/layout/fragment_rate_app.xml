@@ -5,9 +5,10 @@
         android:padding="10dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/welcome_bg"
         android:orientation="vertical">
         <TextView
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
@@ -21,14 +22,14 @@
             android:numStars="5"/>
         <TextView
             android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:text="Please write any comments."/>
         <EditText
             android:paddingLeft="5dp"
-android:background="@drawable/edittext_bg"
+            android:background="@drawable/edittext_bg"
             android:hint="Comment"
             android:layout_width="fill_parent"
             android:layout_height="100dp"/>
@@ -38,6 +39,7 @@ android:background="@drawable/edittext_bg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Submit"
+            android:background="@drawable/button_shape"
             android:textSize="14sp"
             android:layout_gravity="center"/>
     </LinearLayout>

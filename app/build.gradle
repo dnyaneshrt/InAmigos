@@ -65,4 +65,8 @@ dependencies {
     implementation 'com.nineoldandroids:library:2.4.0'
     //implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
 
+    implementation 'ja.burhanrashid52:photoeditor:1.1.0'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.4.10'
+
 }
