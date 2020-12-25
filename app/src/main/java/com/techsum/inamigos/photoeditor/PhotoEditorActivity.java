@@ -113,7 +113,7 @@ public class PhotoEditorActivity extends BaseActivity implements View.OnClickLis
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 1;
         Bitmap bitmap = BitmapFactory.decodeFile(selectedImagePath, options);
-//Bitmap bitmap=BitmapFactory.decodeFile(selectedImagePath,options);
+
         Typeface newFont = Typeface.createFromAsset(getAssets(), "Eventtus-Icons.ttf");
         emojiFont = Typeface.createFromAsset(getAssets(), "emojione-android.ttf");
 
@@ -538,7 +538,7 @@ public class PhotoEditorActivity extends BaseActivity implements View.OnClickLis
     }
 
 
-    //zoom
+    //zoom functionlaity
     private void viewTransformation(View view, MotionEvent event) {
         switch (event.getAction() & MotionEvent.ACTION_MASK) {
             case MotionEvent.ACTION_DOWN:

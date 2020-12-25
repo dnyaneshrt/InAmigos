@@ -29,7 +29,7 @@ class HomeScreenActivity : MediaActivity() {
         fab.setOnClickListener { view ->
             Toast.makeText(this, "button clicked", Toast.LENGTH_LONG).show();
             //Fetch image and start editing
-  openGallery();//calling opengallery method
+               openGallery();//calling opengallery method
           //  startCameraActivity()
 
         }
